@@ -1,0 +1,294 @@
+.c-proCard {
+  transition: box-shadow 0.6s ease-in-out;
+
+  &:hover {
+    .media.media--hover-effect > img + img {
+      opacity: 1;
+      transition: transform 500ms ease;
+      transform: scale(1.03);
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .ruk_rating_snippet i {
+    font-size: 11px;
+    line-height: 11px;
+  }
+  .ruk_rating_snippet {
+    pointer-events: none;
+    display: flex;
+    align-items: baseline;
+    min-height: 16px;
+  }
+  .price .price-item {
+    margin: 0 5px 0 0;
+  }
+  .card__heading {
+    font-weight: $font-weight-semi-bold;
+  }
+  .card__inner.gradient,
+  .card .card__inner .card__media {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+  .card--standard > .card__content .card__information {
+    padding: 16px;
+    background-color: $color-white;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    @include media-desktop-up {
+      padding: 18px 24px 16px;
+    }
+  }
+  .price .price-item.price-item--regular {
+    color: $color-black;
+    font-size: $b2-font-size;
+    line-height: $b2-line-height;
+    font-weight: $font-weight-semi-bold;
+  }
+  .price.price--on-sale .price-item.price-item--regular {
+    color: $color-gray-800;
+    font-size: $b2-font-size;
+    line-height: $b2-line-height;
+    font-weight: $font-weight-normal;
+  }
+  .price-item.price-item--sale.price-item--last {
+    font-size: $b2-font-size;
+    line-height: $b2-line-height;
+    font-weight: $font-weight-semi-bold;
+    color: $color-red;
+  }
+  .price-item.price-item--varies {
+    font-weight: $font-weight-semi-bold;
+  }
+  .c-proCard__saving {
+    color: $color-red;
+    display: block;
+    font-weight: $font-weight-normal;
+    @include media-tablet-up {
+      display: inline-block;
+    }
+  }
+  .price__regular .price-item--regular {
+    color: $color-black;
+  }
+  .card-information
+    > *:not(.visually-hidden:first-child)
+    + *:not(.rating):not(.card__information-volume-pricing-note) {
+    margin-top: 0;
+  }
+  .card-information {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .price {
+    padding: 4px 0 10px;
+  }
+  .card__media .media .motion-reduce {
+    transition: all 0.4s ease;
+    &:nth-child(1) {
+      transform: scale(0.92);
+      @include media-desktop-up {
+        transform: scale(0.92);
+      }
+    }
+  }
+  .card:hover .media.media--hover-effect > img:first-child:only-child,
+  .card-wrapper:hover .media.media--hover-effect > img:first-child:only-child {
+    scale: 1;
+  }
+  .card--standard.card--text:not(.card--horizontal)
+    > .card__content
+    .card__heading:not(.card__heading--placeholder) {
+    display: block;
+  }
+  .placeholder-svg {
+    transition: all 0.4s ease;
+    transform: scale(0.92);
+  }
+  &:hover {
+    .placeholder-svg {
+      transform: scale(1);
+    }
+  }
+  .card__heading .full-unstyled-link {
+    text-decoration: none;
+  }
+
+  &:hover {
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.12);
+  }
+
+  .c-proCard__details {
+    .c-price {
+      display: inline;
+      @include media-desktop-up {
+        display: inline;
+      }
+
+      .c-price__priceSave {
+        vertical-align: baseline;
+      }
+      .c-price__priceOld {
+        @include media-desktop-up {
+          margin-right: 3px;
+        }
+      }
+      .c-price__priceFinal {
+        margin-left: 4px;
+        @include media-desktop-up {
+          margin-right: 2px;
+        }
+      }
+    }
+    .c-price--simple > span {
+      @include media-desktop-up {
+        margin-right: 5px;
+      }
+    }
+
+    .c-colorSwatches {
+      margin-top: 4px;
+    }
+  }
+  .ruk-rating-snippet-count {
+    display: none;
+  }
+}
+
+.c-proCard__message {
+  border-top: 1.5px solid $color-gray-300;
+  display: flex;
+  align-items: baseline;
+  justify-content: left;
+  flex-direction: column;
+  margin-top: 14px;
+  @include media-desktop-up {
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+.card-information
+  > *:not(.visually-hidden:first-child)
+  + *:not(.rating):not(
+    .card__information-volume-pricing-note
+  ).c-proCard__message {
+  margin-top: auto;
+}
+
+.c-proCard__shippingMessage {
+  margin: 0;
+  gap: 8px;
+  align-items: center;
+  max-width: 131px;
+  width: 100%;
+  padding-top: 12px;
+  display: inline-flex;
+  &.c-proCard__shippingMessage--buyNow {
+    display: none;
+    min-width: fit-content;
+    @include media-desktop-up {
+      display: inline-flex;
+    }
+  }
+  @include media-desktop-up {
+    padding-top: 16px;
+  }
+  .o-icon {
+    max-width: 24px;
+    height: 24px;
+  }
+}
+
+.o-icon__clock {
+  max-width: 16px;
+  height: 16px;
+}
+
+.c-proCard__badge {
+  position: absolute;
+  padding: 4px 12px;
+  background: $color-gray-200;
+  border-radius: 2px 2px 0px 0px;
+  z-index: 2;
+  text-transform: capitalize;
+  &.c-proCard__badge--offer {
+    padding: 6px 12px 6px 8px;
+    font-weight: $font-weight-normal;
+  }
+}
+
+.c-proCard__badge--bestseller {
+  top: 8px;
+  left: 8px;
+  @include media-desktop-up {
+    top: 12px;
+    left: 12px;
+  }
+}
+
+.c-proCard__badge--offer {
+  left: 8px;
+  bottom: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  @include media-desktop-up {
+    left: 18px;
+  }
+}
+
+.c-proCard__badge--sale {
+  color: $color-red;
+  top: 8px;
+  left: 8px;
+  @include media-desktop-up {
+    top: 12px;
+    left: 12px;
+  }
+}
+
+.card__badge {
+  display: none;
+}
+
+.c-colorSwatches__colorItem--last {
+  text-align: center;
+}
+
+.card__heading a:after {
+  display: none;
+}
+
+.ruk_rating_snippet {
+  padding-bottom: 4px;
+  display: inline-flex;
+  gap: 4px;
+}
+
+.price-item--varies {
+  font-weight: $font-weight-medium;
+}
+
+.card__media .media {
+  background: #fff;
+}
+
+a.c-proCard__imgLink {
+  position: absolute;
+  display: block;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+}

@@ -1,0 +1,27 @@
+.c-blogHeader__subtitle{
+  margin: 0;
+}
+
+.c-blogHeader__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  @include media-desktop-up {
+    gap: 16px;
+  }
+}
+
+.c-blogHeader__description {
+  font-weight: $font-weight-normal;
+  margin: 0 0 16px 0;
+  @include media-desktop-up {
+    margin: 0;
+  }
+}
+
+.c-blogHeader__title {
+  margin: 0 0 4px;
+  @include media-desktop-up{
+    margin: 0;
+  }
+}

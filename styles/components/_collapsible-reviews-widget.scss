@@ -1,0 +1,180 @@
+.c-collapsibleReviews {
+  border-bottom: 1px solid #d6d7de;
+}
+
+.c-collapsibleReviews__header {
+  cursor: pointer;
+  position: relative;
+  transition: border 0.5s linear;
+}
+
+.c-collapsibleReviews__header.c-collapsibleReviews__header--active {
+  transition-duration: 0.15s;
+  border-color: transparent;
+}
+
+.c-collapsibleReviews__heading {
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: calc(100% - 48px);
+  min-height: 2.675em;
+  display: flex;
+  align-items: center;
+  @include media-desktop-up {
+    min-height: auto;
+    padding: 8px 0;
+  }
+}
+
+.c-collapsibleReviews__heading::after,
+.c-collapsibleReviews__heading::before {
+  content: "";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 2px;
+  width: 16px;
+  background-color: rgb(var(--color-foreground));
+}
+
+.c-collapsibleReviews__heading::before {
+  transition: transform 0.25s linear;
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.c-collapsibleReviews__header.c-collapsibleReviews__header--active
+  .c-collapsibleReviews__heading::before {
+  transform: translateY(-50%) rotate(0);
+  top: 50%;
+  @include media-desktop-up {
+    top: 50%;
+  }
+}
+
+.c-collapsibleReviews__header.c-collapsibleReviews__header--active
+  .c-collapsibleReviews__heading::after {
+  top: 50%;
+  @include media-desktop-up {
+    top: 50%;
+  }
+}
+
+.c-collapsibleReviews__body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.25s linear;
+}
+
+.c-collapsibleReviews__header.c-collapsibleReviews__header--active
+  + .c-collapsibleReviews__body {
+  grid-template-rows: 1fr;
+}
+
+.c-collapsibleReviews__content {
+  margin: 0;
+  overflow: hidden;
+
+  .R-Field__input {
+    background: $color-white !important;
+  }
+
+  .R-ContentList .R-ContentList__item {
+    margin-bottom: 24px !important;
+  }
+
+  .R-Button {
+    display: inline-flex !important;
+    padding: 8px 16px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    border-radius: 2px !important;
+    background-color: $color-navy !important;
+    font-size: $button-medium-font-size !important;
+    line-height: $button-medium-line-height !important;
+    letter-spacing: $button-medium-letter-spacing !important;
+    font-weight: $font-weight-semi-bold !important;
+    color: $color-white !important;
+    gap: 5px !important;
+    transition: all 0.3s ease-in-out !important;
+    min-width: 154px !important;
+    &:hover {
+      background-color: $color-blue !important;
+      border-radius: 2px !important;
+      &::after,
+      &::before {
+        box-shadow: none !important !important;
+      }
+    }
+    &:active {
+      background-color: $color-blue !important;
+      border: 2px solid $color-navy !important;
+    }
+    &:focus {
+      border: 3px solid $color-info-600 !important;
+    }
+    &:disabled,
+    &[disabled] {
+      background: $color-gray-600 !important;
+      cursor: not-allowed !important;
+    }
+  }
+
+  .R-MediaSlider .R-MediaSlider__scrollButton {
+    z-index: 1 !important;
+  }
+
+  .R-MediaSlider .R-MediaSlider__item {
+    height: 90px !important;
+    max-width: 90px !important;
+  }
+
+  .R-ContentList__item {
+    background: $color-white;
+    padding: 30px !important;
+  }
+
+  .ElementsWidget__subheader {
+    padding: 20px 0px 16px 0px;
+    border-top: 1px solid $color-gray-400;
+    border-bottom: 1px solid $color-gray-400 !important;
+  }
+
+  .ElementsWidget__search {
+    .R-Field {
+      background: $color-white;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+    color: $color-navy;
+  }
+
+  .item__review {
+    .stars__icon {
+      font-size: 26px !important;
+    }
+    .u-marginBottom--md {
+      .R-TextHeading {
+        font-size: 24px !important;
+      }
+    }
+  }
+
+  .item__meta {
+    .cssVar-authorName {
+      margin-top: 10px !important;
+    }
+  }
+
+  .ElementsWidget-prefix .R-TextBody {
+    font-weight: $font-weight-normal !important;
+  }
+
+  .ElementsWidget__footer.u-textRight--all {
+    a {
+      display: none !important;
+    }
+  }
+}

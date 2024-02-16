@@ -1,0 +1,201 @@
+html {
+  overflow-x: hidden;
+}
+
+.u-hide {
+  display: none;
+}
+
+.u-hideMobile {
+  display: none;
+  @include media-desktop-up {
+    display: block;
+  }
+}
+
+.u-hideDesktop {
+  @include media-desktop-up {
+    display: none;
+  }
+}
+
+.u-noLineHeight {
+  line-height: 0;
+}
+
+.u-colorSuccess {
+  color: $color-positive-800;
+}
+
+.u-colorError {
+  color: $color-negative-800;
+}
+
+.u-colorAttention {
+  color: $color-warning-800;
+}
+
+.u-colorInfo {
+  color: $color-info-800;
+}
+
+.u-backgroundPrimary {
+  background-color: $color-white;
+  color: $color-black;
+}
+
+.u-backgroundInset {
+  background-color: $color-gray-200;
+  color: $color-black;
+}
+
+.u-backgroundStrong {
+  background-color: $color-gray-300;
+  color: $color-black;
+}
+
+.u-backgroundEmphasis {
+  background-color: $color-navy;
+  color: $color-white;
+}
+
+.u-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.u-topLeft {
+  align-items: start;
+  justify-content: left;
+  text-align: left;
+}
+
+.u-topRight {
+  align-items: start;
+  justify-content: right;
+  text-align: right;
+}
+
+.u-topCenter {
+  align-items: start;
+  justify-content: center;
+  text-align: center;
+}
+
+.u-middleLeft {
+  align-items: center;
+  justify-content: left;
+  text-align: left;
+}
+
+.u-middleRight {
+  align-items: center;
+  justify-content: right;
+  text-align: right;
+}
+
+.u-middleCenter {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.u-bottomLeft {
+  align-items: end;
+  justify-content: left;
+  text-align: left;
+}
+
+.u-bottomRight {
+  align-items: end;
+  justify-content: right;
+  text-align: right;
+}
+
+.u-bottomCenter {
+  align-items: end;
+  justify-content: center;
+  text-align: center;
+}
+
+.u-topLeftDesktop {
+  @include media-desktop-up {
+    align-items: start;
+    justify-content: left;
+    text-align: left;
+  }
+}
+
+.u-topRightDesktop {
+  @include media-desktop-up {
+    align-items: start;
+    justify-content: right;
+    text-align: right;
+  }
+}
+
+.u-topCenterDesktop {
+  @include media-desktop-up {
+    align-items: start;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.u-middleLeftDesktop {
+  @include media-desktop-up {
+    align-items: center;
+    justify-content: left;
+    text-align: left;
+  }
+}
+
+.u-middleRightDesktop {
+  @include media-desktop-up {
+    align-items: center;
+    justify-content: right;
+    text-align: right;
+  }
+}
+
+.u-middleCenterDesktop {
+  @include media-desktop-up {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.u-bottomLeftDesktop {
+  @include media-desktop-up {
+    align-items: end;
+    justify-content: left;
+    text-align: left;
+  }
+}
+
+.u-bottomRightDesktop {
+  @include media-desktop-up {
+    align-items: end;
+    justify-content: right;
+    text-align: right;
+  }
+}
+
+.u-bottomCenterDesktop {
+  @include media-desktop-up {
+    align-items: end;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.u-srOnly {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}

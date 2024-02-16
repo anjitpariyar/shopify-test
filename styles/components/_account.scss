@@ -1,0 +1,74 @@
+account-component {
+  .c-btn {
+    padding: 0px;
+  }
+
+  .c-btnPrimary {
+    display: inline-flex;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    background-color: $color-navy;
+    font-size: $button-small-font-size;
+    line-height: $button-small-line-height;
+    letter-spacing: $button-small-letter-spacing;
+    font-weight: $font-weight-medium;
+    color: $color-white;
+    gap: 5px;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background-color: $color-blue;
+    }
+    &:active {
+      background-color: $color-blue;
+      border: 2px solid $color-navy;
+    }
+    &:focus {
+      border: 3px solid $color-info-600;
+    }
+    &:disabled,
+    &[disabled] {
+      background: $color-gray-600;
+      cursor: not-allowed;
+    }
+  }
+
+  .c-btnQuaternary {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1.8px solid $color-navy;
+    background-color: transparent;
+    font-size: $button-small-font-size;
+    line-height: $button-small-line-height;
+    letter-spacing: $button-small-letter-spacing;
+    font-weight: $font-weight-medium;
+    color: $color-navy;
+    gap: 4px;
+    text-decoration: none;
+    &:hover {
+      border-bottom: 3px solid $color-navy;
+    }
+    &:active {
+      color: $color-blue;
+      border-bottom: 0;
+      .c-btnIcon path {
+        stroke: $color-blue;
+      }
+    }
+    &:focus {
+      box-shadow: 0px 0px 1px 3px $color-info-600;
+      border-radius: 2px;
+    }
+    &:disabled,
+    &[disabled] {
+      border-bottom: 1.8px solid $color-gray-600;
+      color: $color-gray-600;
+      cursor: not-allowed;
+      .c-btnIcon path {
+        stroke: $color-gray-600;
+      }
+    }
+  }
+}

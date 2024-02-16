@@ -1,0 +1,22 @@
+.c-modal {
+  width: 1000px;
+  max-width: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $color-white;
+  z-index: 3;
+}
+
+.c-modal__inner {
+  display: grid;
+  gap: 16px;
+  @include media-desktop-up {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.c-modal__details {
+  padding: 16px;
+}

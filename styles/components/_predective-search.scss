@@ -1,0 +1,91 @@
+.c-predictiveSearch {
+  .predictive-search__heading {
+    font-family: $font-family;
+    font-size: $n2-font-size-desktop;
+    line-height: $n2-line-height-desktop;
+    color: $color-gray-600;
+    font-weight: $font-weight-normal;
+    opacity: 1;
+    margin-bottom: 0;
+    letter-spacing: 0;
+  }
+  .predictive-search__item-heading {
+    font-size: $b1-font-size;
+    line-height: $b1-line-height;
+    font-family: $font-family;
+    text-transform: capitalize;
+  }
+  .predictive-search__results-list {
+    margin-top: 16px;
+  }
+  .predictive-search__result-group,
+  .predictive-search__result-group:first-child {
+    @include media-desktop-up {
+      flex: 0 0 44%;
+    }
+  }
+  .predictive-search__result-group:first-child {
+    border-bottom: 1px solid $color-gray-300;
+    @include media-desktop-up {
+      border-right: 1px solid $color-gray-300;
+      border-bottom: none;
+    }
+  }
+  .predictive-search__results-groups-wrapper:not(
+      .predictive-search__results-groups-wrapper--no-suggestions
+    ) {
+    padding: 40px 20px;
+    gap: 24px;
+    @include media-desktop-up {
+      padding: 40px 0;
+      gap: 32px;
+    }
+  }
+  .predictive-search__results-groups-wrapper {
+    background-color: $color-white;
+    gap: 32px;
+    .c-predictiveSearch__allResults {
+      padding-right: 7px;
+    }
+  }
+
+  .c-preditiveSearch__suggestions {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+    @include media-tablet-up { 
+      flex-direction: column;
+      margin: 0;
+    }
+  }
+  .c-preditiveSearch__suggestions > div{
+    flex: 0 0 calc(50% - 12px);
+    @include media-tablet-up { 
+      flex: 0 0 auto;
+    }
+  }
+}
+
+.c-predictiveSearch__allResults {
+  text-decoration: underline;
+  cursor: pointer;
+  color: $color-black;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.c-predictiveSearch__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*required because it is changing the inner html based on search */
+.predictive-search__item * {
+  color: $color-black;
+}
+
+predictive-search .predictive-search {
+  box-shadow: none;
+}

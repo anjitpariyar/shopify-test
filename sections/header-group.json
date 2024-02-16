@@ -1,0 +1,77 @@
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "19002a55-891a-4bf2-abaa-d29b0a3a85e6": {
+      "type": "top-announcement-bar",
+      "blocks": {
+        "sections--21340513403157__19002a55-891a-4bf2-abaa-d29b0a3a85e6-announcement-1": {
+          "type": "announcement",
+          "settings": {
+            "text": "FREE Shipping on all Orders",
+            "icon": "shopify:\/\/shop_images\/truck.png",
+            "link": "",
+            "prop": "Expedited shipping options available for a fee"
+          }
+        },
+        "a9c97c88-dff8-486b-8dcb-4afa39f57402": {
+          "type": "announcement",
+          "settings": {
+            "text": "All Orders Ship Next Day",
+            "icon": "shopify:\/\/shop_images\/next-day.png",
+            "link": "",
+            "prop": "Backorders and some other exclusions apply"
+          }
+        },
+        "39551122-3014-4ba9-8ca1-94da94468bd6": {
+          "type": "announcement",
+          "settings": {
+            "text": "Make Payments Over Time",
+            "icon": "shopify:\/\/shop_images\/Clock.png",
+            "link": "",
+            "prop": "Split pay or financing with 0% APR* available"
+          }
+        }
+      },
+      "block_order": [
+        "sections--21340513403157__19002a55-891a-4bf2-abaa-d29b0a3a85e6-announcement-1",
+        "a9c97c88-dff8-486b-8dcb-4afa39f57402",
+        "39551122-3014-4ba9-8ca1-94da94468bd6"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "show_line_separator": true
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "logo_position": "middle-left",
+        "menu": "main-menu",
+        "menu_type_desktop": "mega",
+        "sticky_header_type": "always",
+        "show_line_separator": false,
+        "color_scheme": "accent-1",
+        "menu_color_scheme": "background-1",
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "mobile_logo_position": "left",
+        "margin_bottom": 0,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "promo-bar": {
+      "type": "promo-bar",
+      "settings": {
+        "bg_color": "#ffffff",
+        "text_color": "#000000"
+      }
+    }
+  },
+  "order": [
+    "19002a55-891a-4bf2-abaa-d29b0a3a85e6",
+    "header",
+    "promo-bar"
+  ]
+}

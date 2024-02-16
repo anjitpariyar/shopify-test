@@ -1,0 +1,218 @@
+.c-testimonials__row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+.c-testimonials__col {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.c-testimonials__col--testimonials {
+  @include media-desktop-up {
+    flex: 0 0 66.65%;
+    max-width: 66.65%;
+  }
+}
+
+.c-testimonials__col--logos {
+  margin-top: 72px;
+  @include media-desktop-up {
+    flex: 0 0 32.73%;
+    max-width: 32.73%;
+    align-self: flex-start;
+    margin-top: 0;
+  }
+  .c-testimonials__rating {
+    margin-top: 0;
+  }
+  .c-testimonials__stars {
+    justify-content: center;
+  }
+  .c-testimonials__rating,
+  .c-testimonials__ratingText {
+    text-align: center;
+  }
+  .c-testimonials__ratingText {
+    margin-top: 16px;
+    display: inline-block;
+    @include media-desktop-up {
+      margin-bottom: 30px;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.c-testimonials__item {
+  opacity: 1;
+  display: block;
+  transition: opacity 0.15s linear;
+  @include media-desktop-up {
+    min-height: 400px;
+  }
+}
+
+.c-testimonials__item--hidden {
+  opacity: 0;
+  display: none;
+}
+
+.c-testimonials__logos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.c-testimonials__logo {
+  flex: 0 0 calc(33%);
+  max-width: calc(33%);
+  text-align: center;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-bottom: 40px;
+  @include media-desktop-up {
+    flex: 0 0 calc(50%);
+    max-width: calc(51%);
+    margin-bottom: 70px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.c-testimonials__logoBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include media-desktop-up { 
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.c-testimonials__brandLogo {
+  max-width: 100%;
+  opacity: 0.4;
+  transition: opacity 0.15s linear;
+  mix-blend-mode: darken;
+}
+
+.c-testimonials__logoBtn:hover .c-testimonials__brandLogo,
+.c-testimonials__logoBtn--active .c-testimonials__brandLogo {
+  opacity: 1;
+}
+
+.c-testimonials__heading {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+  text-align: center;
+  @include media-desktop-up {
+    text-align: left;
+  }
+}
+
+.c-testimonials__brandName {
+  text-transform: uppercase;
+  text-align: center;
+  height: 102px;
+}
+
+.c-testimonials__author {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: $font-weight-medium;
+  @include media-desktop-up {
+    text-align: left;
+  }
+}
+
+.c-testimonials__content {
+  font-weight: $font-weight-semi-bold;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+
+  // overriding default blockquotes
+  font-style: inherit;
+  padding-left: 0;
+  color: inherit;
+  border-left: 0;
+  margin: 0 0 14px;
+
+  @include media-desktop-up {
+    margin-bottom: 24px;
+    text-align: left;
+  }
+}
+
+.c-testimonials__content::after,
+.c-testimonials__content::before {
+  content: "";
+  position: absolute;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 50px;
+  z-index: -1;
+  @include media-desktop-up {
+    height: 58px;
+    width: 72px;
+  }
+}
+
+.c-testimonials__content::before {
+  top: -10px;
+  background-image: url("data:image/svg+xml,%3Csvg width='72' height='58' viewBox='0 0 72 58' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.5' d='M42.5552 57.6H71.5702V29.6597H57.3851C57.3851 19.1284 65.3373 12.2508 72 10.1015V0C57.6 2.36419 42.5552 12.6806 42.5552 32.2388V57.6ZM0 57.6H29.0149V29.6597H14.8299C14.8299 19.1284 22.7821 12.2508 29.4448 10.1015V0C15.0448 2.36419 0 12.6806 0 32.2388V57.6Z' fill='%23CACACA'/%3E%3C/svg%3E%0A");
+}
+
+.c-testimonials__content::after {
+  margin-left: -50px;
+  margin-top: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg width='72' height='58' viewBox='0 0 72 58' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.5' d='M42.5552 57.6C56.9552 55.2358 72 44.9194 72 25.3612V0H42.9851V27.9403H57.1702C57.1702 38.4716 49.2179 45.3493 42.5552 47.4985V57.6ZM0 57.6C14.4 55.2358 29.4448 44.9194 29.4448 25.3612V0H0.429851V27.9403H14.6149C14.6149 38.4716 6.66269 45.3493 0 47.4985V57.6Z' fill='%23CACACA'/%3E%3C/svg%3E%0A");
+  @include media-desktop-up {
+    margin-left: -71px;
+  }
+}
+
+.c-testimonials__rating {
+  margin-top: 41px;
+  text-align: center;
+  @include media-desktop-up {
+    margin-top: 35px;
+    text-align: left;
+  }
+}
+
+.c-testimonials__stars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 16px;
+  justify-content: center;
+  @include media-desktop-up {
+    justify-content: flex-start;
+  }
+}
+
+.c-testimonials__ratingText {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  text-align: center;
+  font-weight: $font-weight-medium;
+  color: rgba(var(--color-foreground));
+  @include media-desktop-up {
+    text-align: left;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,13 @@
+.c-prodMediaGallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  &:hover {
+    cursor: pointer;
+  }
+
+  .c-product__media {
+    border-radius: 2px;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,26 @@
+<article class="c-articleCard">
+  <div class="c-articleCard__img">
+    <a href="{{ article.url }}">
+      {%- liquid
+        assign image_height = article.image.width | divided_by: 1.5
+      -%}
+      {{
+        article.image
+        | image_url: width: article.image.width, height: image_height
+        | image_tag: loading: 'lazy', class: 'c-articleCard__imgTag'
+      }}
+    </a>
+  </div>
+  <div class="c-articleCard__info">
+    <div class="c-articleCard__infoWrapper">
+      <h2 class="c-articleCard__title c-h3">
+        <a href="{{ article.url }}" class="c-articleCard__titleLink">
+          {{ article.title | escape }}
+        </a>
+      </h2>
+      <p class="c-articleCard__publishedDate c-b2">{{ article.published_at | date: '%B %d, %Y' }}</p>
+      <p class="c-articleCard__description c-b1">{{ article.excerpt_or_content | truncatewords: 25 | strip_html }}</p>
+      <a href="{{ article.url }}" class="c-articleCard__btn c-btnQuaternary c-a1">Read More</a>
+    </div>
+  </div>
+</article>

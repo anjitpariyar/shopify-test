@@ -1,0 +1,512 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $font-family;
+  font-weight: $font-weight-normal;
+  letter-spacing: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.c-h1,
+.c-h2,
+.c-h3,
+.c-h4,
+.h0,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+  font-family: $font-family;
+  font-weight: $font-weight-semi-bold;
+  letter-spacing: normal;
+}
+
+.c-h1 {
+  font-size: $h1-font-size-mobile;
+  line-height: $h1-line-height;
+  letter-spacing: $letter-spacing;
+  @include media-tablet-up {
+    font-size: $h1-font-size-tablet;
+    letter-spacing: $h1-letter-spacing-tablet;
+  }
+  @include media-desktop-up {
+    font-size: $h1-font-size-desktop;
+    letter-spacing: $h1-letter-spacing-desktop;
+  }
+}
+
+.c-h2 {
+  font-size: $h2-font-size-mobile;
+  line-height: $h2-line-height;
+  letter-spacing: $letter-spacing;
+  @include media-tablet-up {
+    font-size: $h2-font-size-tablet;
+    letter-spacing: $h2-letter-spacing-tablet;
+  }
+  @include media-desktop-up {
+    font-size: $h2-font-size-desktop;
+    letter-spacing: $h2-letter-spacing-desktop;
+  }
+}
+
+.c-h3 {
+  font-size: $h3-font-size-mobile;
+  line-height: $h3-line-height;
+  letter-spacing: $letter-spacing;
+  @include media-tablet-up {
+    font-size: $h3-font-size-tablet;
+    letter-spacing: $h3-letter-spacing-tablet;
+  }
+  @include media-desktop-up {
+    font-size: $h3-font-size-desktop;
+    letter-spacing: $h3-letter-spacing-desktop;
+    font-weight: $font-weight-semi-bold;
+  }
+}
+
+.c-h3--normal {
+  font-weight: $font-weight-normal;
+}
+
+.c-h4 {
+  font-size: $h4-font-size-mobile;
+  line-height: $h4-line-height;
+  letter-spacing: $letter-spacing;
+  @include media-tablet-up {
+    font-size: $h4-font-size-tablet;
+    letter-spacing: $h4-letter-spacing-tablet;
+  }
+  @include media-desktop-up {
+    font-size: $h4-font-size-desktop;
+    letter-spacing: $h4-letter-spacing-desktop;
+  }
+}
+
+p,
+.c-b1 {
+  font-size: $b1-font-size;
+  line-height: $b1-line-height;
+}
+
+p strong,
+.c-b1--strong {
+  font-weight: $font-weight-semi-bold;
+}
+
+.c-b2 {
+  font-size: $b2-font-size;
+  line-height: $b2-line-height;
+  font-weight: $font-weight-semi-bold;
+}
+
+.c-b2--strong {
+  font-weight: $font-weight-semi-bold;
+}
+
+.c-b2--regular {
+  font-weight: $font-weight-normal;
+}
+
+.c-b2--normal {
+  font-weight: $font-weight-normal;
+}
+
+.c-b2--medium {
+  font-weight: $font-weight-medium;
+}
+
+.c-b3 {
+  font-size: $b3-font-size;
+  line-height: $b3-line-height;
+}
+
+.c-b3--regular {
+  font-weight: $font-weight-normal;
+}
+
+.c-b3--medium {
+  font-weight: $font-weight-medium;
+}
+
+.c-b3--strong {
+  font-weight: $font-weight-semi-bold;
+}
+
+.c-d1 {
+  font-size: $d1-font-size-mobile;
+  letter-spacing: $d1-letter-spacing-mobile;
+  line-height: $d1-line-height-mobile;
+  text-transform: uppercase;
+  font-style: $font-style-italic;
+  font-weight: $font-weight-ex-bold;
+  @include media-tablet-up {
+    font-size: $d1-font-size-tablet;
+    letter-spacing: $d1-letter-spacing-tablet;
+    line-height: $d1-line-height-tablet;
+  }
+  @include media-desktop-up {
+    font-size: $d1-font-size-desktop;
+    letter-spacing: $d1-letter-spacing-desktop;
+    line-height: $d1-line-height-desktop;
+  }
+}
+
+.c-s1 {
+  font-size: $s1-font-size-mobile;
+  letter-spacing: $s1-letter-spacing-mobile;
+  line-height: $s1-line-height-mobile;
+  text-transform: uppercase;
+  font-weight: $font-weight-semi-bold;
+  @include media-desktop-up {
+    font-size: $s1-font-size-desktop;
+    letter-spacing: $s1-letter-spacing-desktop;
+    line-height: $s1-line-height-desktop;
+  }
+}
+
+.c-s1--medium {
+  font-weight: $font-weight-medium;
+}
+
+.c-a1 {
+  font-size: $a1-font-size-desktop;
+  letter-spacing: $a1-letter-spacing-desktop;
+  line-height: $a1-line-height-desktop;
+  font-weight: $font-weight-semi-bold;
+  text-transform: uppercase;
+}
+
+.c-a2 {
+  font-size: $a2-font-size-desktop;
+  letter-spacing: $a2-letter-spacing-desktop;
+  line-height: $a2-line-height-desktop;
+  font-weight: $font-weight-semi-bold;
+  text-transform: uppercase;
+}
+
+.c-n1 {
+  font-size: $n1-font-size-desktop;
+  line-height: $n1-line-height-desktop;
+  font-weight: $font-weight-semi-bold;
+}
+
+.c-n2 {
+  font-size: $n2-font-size-desktop;
+  line-height: $n2-line-height-desktop;
+}
+
+.c-f1 {
+  font-size: $f1-font-size-desktop;
+  line-height: $f1-line-height-desktop;
+  letter-spacing: $f1-letter-spacing-desktop;
+}
+
+.c-f2 {
+  font-size: $f2-font-size-desktop;
+  line-height: $f2-line-height-desktop;
+  letter-spacing: $f2-letter-spacing-desktop;
+}
+
+.c-f3 {
+  font-size: $f3-font-size-desktop;
+  line-height: $f3-line-height-desktop;
+  letter-spacing: $f3-letter-spacing-desktop;
+}
+
+/* component-form */
+.field__input,
+.select__select,
+.customer .field input,
+.customer select {
+  background-color: transparent;
+  color: $color-black;
+  font-size: $f1-font-size-desktop;
+  line-height: $f1-line-height-desktop;
+  letter-spacing: $f1-letter-spacing-desktop;
+  border-radius: 2px;
+  height: 44px;
+}
+
+.field:after,
+.select:after,
+.customer .field:after,
+.customer select:after,
+.localization-form__select:after {
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px $color-gray-400;
+  transition: box-shadow 0.1 ease;
+  z-index: 1;
+}
+
+.select__select {
+  font-size: $f1-font-size-desktop;
+  line-height: $f1-line-height-desktop;
+  letter-spacing: $f1-letter-spacing-desktop;
+  color: $color-black;
+}
+
+.field:hover.field:after,
+.select:hover.select:after,
+.select__select:hover.select__select:after,
+.customer .field:hover.field:after,
+.customer select:hover.select:after,
+.localization-form__select:hover.localization-form__select:after {
+  box-shadow: 0 0 0 1px $color-blue;
+  outline: 0;
+  border-radius: 2px;
+}
+
+.field__input:focus-visible,
+.select__select:focus-visible,
+.customer .field input:focus-visible,
+.customer select:focus-visible,
+.localization-form__select:focus-visible.localization-form__select:after {
+  box-shadow: 0 0 0 1.5px $color-blue;
+  outline: 0;
+}
+
+.field__input:focus,
+.select__select:focus,
+.customer .field input:focus,
+.customer select:focus,
+.localization-form__select:focus.localization-form__select:after {
+  box-shadow: 0 0 0 1.5px $color-blue;
+  outline: 0;
+}
+
+.localization-form__select:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.text-area,
+.select {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+/* Select */
+
+.select .icon-caret,
+.customer select + svg {
+  height: 0.6rem;
+  pointer-events: none;
+  position: absolute;
+  top: calc(50% - 0.2rem);
+  right: calc(var(--inputs-border-width) + 1.5rem);
+}
+
+.select__select,
+.customer select {
+  cursor: pointer;
+  line-height: calc(1 + 0.6 / var(--font-body-scale));
+  padding: 0 2rem;
+  margin: var(--inputs-border-width);
+  min-height: calc(var(--inputs-border-width) * 2);
+}
+
+/* Field */
+
+.field {
+  position: relative;
+  width: 100%;
+  display: flex;
+  transition: box-shadow 0.1s ease;
+}
+
+.customer .field {
+  display: flex;
+}
+
+.field--with-error {
+  flex-wrap: wrap;
+}
+
+.field__input,
+.customer .field input {
+  flex-grow: 1;
+  text-align: left;
+  padding: 0.375rem 0.75rem;
+  margin: var(--inputs-border-width);
+  transition: 0.1s ease;
+}
+
+.field__label,
+.customer .field label {
+  font-size: $f1-font-size-desktop;
+  line-height: $f1-line-height-desktop;
+  letter-spacing: $f1-letter-spacing-desktop;
+  left: calc(var(--inputs-border-width) + 2rem);
+  top: calc(1rem + var(--inputs-border-width));
+  margin-bottom: 0;
+  pointer-events: none;
+  position: absolute;
+  transition: top var(--duration-short) ease,
+    font-size var(--duration-short) ease;
+  color: $color-gray-600;
+}
+
+.field__input:focus ~ .field__label,
+.field__input:not(:placeholder-shown) ~ .field__label,
+.field__input:-webkit-autofill ~ .field__label,
+.customer .field input:focus ~ label,
+.customer .field input:not(:placeholder-shown) ~ label,
+.customer .field input:-webkit-autofill ~ label {
+  font-size: $f1-font-size-desktop;
+  line-height: $f1-line-height-desktop;
+  letter-spacing: $f1-letter-spacing-desktop;
+  top: -12px;
+  left: 8px;
+  background: white;
+  z-index: 2;
+  padding: 0px 4px;
+}
+
+.field__input:focus,
+.field__input:not(:placeholder-shown),
+.field__input:-webkit-autofill,
+.customer .field input:focus,
+.customer .field input:not(:placeholder-shown),
+.customer .field input:-webkit-autofill {
+  padding: 6px 12px 6px;
+  margin: var(--inputs-border-width);
+}
+
+.field__input::-webkit-search-cancel-button,
+.customer .field input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.field__input::placeholder,
+.customer .field input::placeholder {
+  opacity: 0;
+}
+
+.field__button {
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  color: currentColor;
+  cursor: pointer;
+  display: flex;
+  height: 44px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 4.4rem;
+}
+
+.field__button > svg {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.field__input:-webkit-autofill ~ .field__button,
+.field__input:-webkit-autofill ~ .field__label,
+.customer .field input:-webkit-autofill ~ label {
+  color: $color-black;
+}
+
+/* Text area */
+
+.text-area {
+  font-size: $f1-font-size-desktop;
+  line-height: $f1-line-height-desktop;
+  letter-spacing: $f1-letter-spacing-desktop;
+  min-height: 10rem;
+  resize: none;
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+/* Form global */
+
+.form__label {
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.form__message {
+  align-items: center;
+  display: flex;
+  font-size: 1.4rem;
+  line-height: 1;
+  margin-top: 1rem;
+}
+
+.form__message--large {
+  font-size: 1.6rem;
+}
+
+.customer .field .form__message {
+  font-size: 1.4rem;
+  text-align: left;
+}
+
+.form__message .icon,
+.customer .form__message svg {
+  flex-shrink: 0;
+  height: 1.3rem;
+  margin-right: 0.5rem;
+  width: 1.3rem;
+}
+
+.form__message--large .icon,
+.customer .form__message svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-right: 1rem;
+}
+
+.customer .field .form__message svg {
+  align-self: start;
+}
+
+.form-status {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.form-status-list {
+  padding: 0;
+  margin: 2rem 0 4rem;
+}
+
+.form-status-list li {
+  list-style-position: inside;
+}
+
+.form-status-list .link::first-letter {
+  text-transform: capitalize;
+}

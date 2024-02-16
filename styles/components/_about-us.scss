@@ -1,0 +1,35 @@
+.c-aboutUs__title,
+.c-aboutUs__heading,
+.c-aboutUs__wrapper p,
+.c-aboutUs__infoHeading {
+  margin: 0;
+}
+
+.c-aboutUs__wrapper {
+  max-width: 898px;
+  padding: 0px 4px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  img {
+    width: 100%;
+  }
+}
+
+.c-aboutUs__textBlocks {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  @include media-desktop-up {
+    flex-direction: row;
+    gap: 32px;
+  }
+}
+
+.c-aboutUs_infoBlock {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

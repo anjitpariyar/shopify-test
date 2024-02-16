@@ -1,0 +1,272 @@
+{%- liquid
+  if section.settings.hide_variants and variant_images.size == product.media.size
+    assign single_media_visible = true
+  endif
+
+  assign media_count = product.media.size
+  if section.settings.hide_variants and media_count > 1 and variant_images.size > 0
+    assign media_count = media_count | minus: variant_images.size | plus: 1
+  endif
+
+  if section.settings.media_size == 'large'
+    assign media_width = 0.65
+  elsif section.settings.media_size == 'medium'
+    assign media_width = 0.55
+  elsif section.settings.media_size == 'small'
+    assign media_width = 0.45
+  endif
+
+  assign id_append = ''
+  if is_duplicate
+    assign id_append = '-duplicate'
+  endif
+-%}
+
+{% assign show_more_threshold = 6 %}
+
+<div id="c-GalleryViewer-{{ section.id }}{{ id_append }}">
+  <span style="display:none;" data-prod-json-data>{{ product.selected_or_first_available_variant | json }}</span>
+  <div
+    id="c-Slider-Gallery-{{ section.id }}{{ id_append }}"
+    class="c-product__media-list c-prodMediaGallery"
+    role="list"
+    data-selected-variant-title="{{ product.selected_or_first_available_variant.title | escape }}"
+  >
+    {%- if product.selected_or_first_available_variant.featured_media != null or product.featured_media != null -%}
+      {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
+
+      {% if featured_media == null %}
+        {%- assign featured_media = product.featured_media -%}
+      {% endif %}
+
+      {% assign alt_text_parts = featured_media.alt | split: '|' %}
+      {% assign variant_title = alt_text_parts[1] | strip | replace: ' ', '_' | replace: '"', '' | replace: '/', '' %}
+      {%- assign media_position = 0 -%}
+      <div
+        id="c-Slide-{{ section.id }}-{{ featured_media.id }}{{ id_append }}"
+        class="c-hiddenMedia c-product__media-item c-modalSlider-btn c-featuredMedia"
+        data-position="{{ media_position }}"
+        data-media-id="{{ section.id }}-{{ featured_media.id }}"
+        data-variant-title="{{ variant_title }}"
+        data-variant="{{ variant_title }}"
+        data-hidden-media="false"
+        data-product-media
+      >
+        {% render 'product-thumbnail-grid',
+          media: featured_media,
+          media_count: media_count,
+          position: media_position,
+          desktop_layout: section.settings.gallery_layout,
+          mobile_layout: section.settings.mobile_thumbnails,
+          loop: section.settings.enable_video_looping,
+          modal_id: section.id,
+          xr_button: true,
+          media_width: media_width,
+          media_fit: section.settings.media_fit,
+          constrain_to_viewport: section.settings.constrain_to_viewport,
+          lazy_load: false
+        %}
+      </div>
+    {%- endif -%}
+
+    {%- for media in product.media -%}
+      {%- if productSet -%}
+        {%- unless variant_images contains media.src -%}
+          {%- unless media.id == product.selected_or_first_available_variant.featured_media.id
+            or media.id == product.featured_media.id
+          -%}
+            {% assign alt_text_parts = media.alt | split: '|' %}
+            {% assign variant_title = alt_text_parts[1]
+              | strip
+              | replace: ' ', '_'
+              | replace: '"', ''
+              | replace: '/', ''
+            %}
+
+            {%- if forloop.index <= show_more_threshold -%}
+              {%- liquid
+                assign media_position = media_position | default: 0 | plus: 1
+                assign lazy_load = false
+                if media_position > 1
+                  assign lazy_load = true
+                endif
+              -%}
+
+              <div
+                id="c-Slide-{{ section.id }}-{{ media.id }}{{ id_append }}"
+                class="c-hiddenMedia c-product__media-item c-modalSlider-btn"
+                data-position="{{ media_position }}"
+                data-media-id="{{ section.id }}-{{ media.id }}"
+                data-variant-title="{{ variant_title }}"
+                data-variant="{{ variant_title }}"
+                data-hidden-media="false"
+                data-product-media
+              >
+                {% render 'product-thumbnail-grid',
+                  media: media,
+                  media_count: media_count,
+                  position: media_position,
+                  desktop_layout: section.settings.gallery_layout,
+                  mobile_layout: section.settings.mobile_thumbnails,
+                  loop: section.settings.enable_video_looping,
+                  modal_id: section.id,
+                  xr_button: true,
+                  media_width: media_width,
+                  media_fit: section.settings.media_fit,
+                  constrain_to_viewport: section.settings.constrain_to_viewport,
+                  lazy_load: lazy_load
+                %}
+              </div>
+            {%- endif -%}
+
+            {%- if forloop.index > show_more_threshold -%}
+              {%- liquid
+                assign media_position = media_position | default: 0 | plus: 1
+                assign lazy_load = false
+                if media_position > 1
+                  assign lazy_load = true
+                endif
+              -%}
+
+              <div
+                id="c-Slide-{{ section.id }}-{{ media.id }}{{ id_append }}"
+                class="c-hiddenMedia c-product__media-item c-modalSlider-btn"
+                data-position="{{ media_position }}"
+                data-media-id="{{ section.id }}-{{ media.id }}"
+                data-variant-title="{{ variant_title }}"
+                data-variant="{{ variant_title }}"
+                data-hidden-media="true"
+                data-product-media
+              >
+                {% render 'product-thumbnail-grid',
+                  media: media,
+                  media_count: media_count,
+                  position: media_position,
+                  desktop_layout: section.settings.gallery_layout,
+                  mobile_layout: section.settings.mobile_thumbnails,
+                  loop: section.settings.enable_video_looping,
+                  modal_id: section.id,
+                  xr_button: true,
+                  media_width: media_width,
+                  media_fit: section.settings.media_fit,
+                  constrain_to_viewport: section.settings.constrain_to_viewport,
+                  lazy_load: lazy_load
+                %}
+              </div>
+            {%- endif -%}
+          {%- endunless -%}
+        {%- endunless -%}
+
+      {%- else -%}
+        {%- unless media.id == product.selected_or_first_available_variant.featured_media.id
+          or media.id == product.featured_media.id
+        -%}
+          {% assign alt_text_parts = media.alt | split: '|' %}
+          {% assign variant_title = alt_text_parts[1]
+            | strip
+            | replace: ' ', '_'
+            | replace: '"', ''
+            | replace: '/', ''
+          %}
+
+          {%- if forloop.index <= show_more_threshold -%}
+            {%- liquid
+              assign media_position = media_position | default: 0 | plus: 1
+              assign lazy_load = false
+              if media_position > 1
+                assign lazy_load = true
+              endif
+            -%}
+            <div
+              id="c-Slide-{{ section.id }}-{{ media.id }}{{ id_append }}"
+              class="c-hiddenMedia c-product__media-item c-modalSlider-btn"
+              data-position="{{ media_position }}"
+              data-media-id="{{ section.id }}-{{ media.id }}"
+              data-variant-title="{{ variant_title }}"
+              data-variant="{{ variant_title }}"
+              data-hidden-media="false"
+              data-product-media
+            >
+              {% render 'product-thumbnail-grid',
+                media: media,
+                media_count: media_count,
+                position: media_position,
+                desktop_layout: section.settings.gallery_layout,
+                mobile_layout: section.settings.mobile_thumbnails,
+                loop: section.settings.enable_video_looping,
+                modal_id: section.id,
+                xr_button: true,
+                media_width: media_width,
+                media_fit: section.settings.media_fit,
+                constrain_to_viewport: section.settings.constrain_to_viewport,
+                lazy_load: lazy_load
+              %}
+            </div>
+          {%- endif -%}
+
+          {%- if forloop.index > show_more_threshold -%}
+            {%- liquid
+              assign media_position = media_position | default: 0 | plus: 1
+              assign lazy_load = false
+              if media_position > 1
+                assign lazy_load = true
+              endif
+            -%}
+            <div
+              id="c-Slide-{{ section.id }}-{{ media.id }}{{ id_append }}"
+              class="c-hiddenMedia c-product__media-item c-modalSlider-btn"
+              data-position="{{ media_position }}"
+              data-media-id="{{ section.id }}-{{ media.id }}"
+              data-hidden-media="true"
+              data-variant-title="{{ variant_title }}"
+              data-variant="{{ variant_title }}"
+              data-product-media
+            >
+              {% render 'product-thumbnail-grid',
+                media: media,
+                media_count: media_count,
+                position: media_position,
+                desktop_layout: section.settings.gallery_layout,
+                mobile_layout: section.settings.mobile_thumbnails,
+                loop: section.settings.enable_video_looping,
+                modal_id: section.id,
+                xr_button: true,
+                media_width: media_width,
+                media_fit: section.settings.media_fit,
+                constrain_to_viewport: section.settings.constrain_to_viewport,
+                lazy_load: lazy_load
+              %}
+            </div>
+          {%- endif -%}
+        {%- endunless -%}
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+
+  {%- for media in product.media -%}
+    {%- if forloop.index == show_more_threshold -%}
+      <div class="c-showMoreWrapper c-onlyDesktop">
+        <button class="c-btn c-btnTertiary c-showMoreBtn" type="button" data-show-hidden-media-btn>
+          <div class="c-btnIcon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+              <path d="M12.75 6V18" stroke="#0A2440" stroke-width="2"/>
+              <path d="M6.75 12H18.75" stroke="#0A2440" stroke-width="2"/>
+            </svg>
+          </div>
+          Show More
+        </button>
+      </div>
+      <div class="c-showLessWrapper c-onlyDesktop">
+        <button class="c-btn c-btnTertiary c-showLessBtn" type="button" data-hide-shown-media-btn>
+          <div class="c-btnIcon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+              <path d="M12.75 6V18" stroke="#0A2440" stroke-width="2"/>
+              <path d="M6.75 12H18.75" stroke="#0A2440" stroke-width="2"/>
+            </svg>
+          </div>
+          Show less
+        </button>
+      </div>
+    {%- endif -%}
+  {%- endfor -%}
+</div>

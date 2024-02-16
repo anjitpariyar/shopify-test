@@ -1,0 +1,141 @@
+.c-searchResult__term,
+.c-searchResult__title {
+  margin: 0;
+}
+
+.c-searchResult__term {
+  margin-top: 8px;
+  @include media-desktop-up {
+    margin-top: 16px;
+  }
+}
+
+// Nesting Requred to overwrite Dawn Search Form Style
+.c-searchResult {
+  .c-factes__button {
+    max-width: 100%;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 32px;
+  }
+  .c-facets__aside--sticky {
+    .c-factes__button {
+      margin-top: 0;
+    }
+  }
+  .template-search__header,
+  .template-search__search {
+    margin-bottom: 0;
+  }
+  .template-search__search .search {
+    margin: 16px 0 0;
+    @include media-desktop-up {
+      margin: 32px 0 0;
+    }
+  }
+  .field {
+    justify-content: center;
+  }
+  .field,
+  .field * {
+    box-shadow: none;
+    cursor: pointer;
+  }
+  .search__input,
+  .search__input::placeholder {
+    font-size: $n2-font-size-desktop;
+    line-height: $n2-line-height-desktop;
+    background-color: transparent;
+    color: $color-navy;
+    &:hover {
+      background-color: transparent;
+    }
+  }
+  .field.c-search__noResultField {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .predictive-search {
+    border: none;
+  }
+  .field:before,
+  .field:after {
+    display: none;
+  }
+  .o-icon__searchResult {
+    max-width: 24px;
+    width: 24px;
+    height: 24px;
+  }
+  .facets__price .field__input {
+    border: 1px solid $color-black;
+    border-radius: 2px;
+  }
+
+  .c-facets__aside--sticky {
+    top: 63px;
+    @include media-desktop-up {
+      top: 80px;
+    }
+  }
+}
+
+.c-collections {
+  @include media-desktop-up {
+    .c-facets__aside {
+      max-width: 100%;
+      width: 100%;
+      padding: 0;
+      .facets-container {
+        max-width: 1440px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 12px 48px;
+      }
+    }
+  }
+}
+
+.c-searchResult__searchFields {
+  border: 1px solid $color-gray-400;
+  border-radius: 2px;
+  max-width: 310px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  background-color: $color-white;
+  cursor: pointer;
+}
+
+.c-search__matching {
+  margin: 0 0 44px;
+  @include media-desktop-up {
+    margin: 0 0 48px;
+  }
+}
+
+.c-search__hintWrapper {
+  margin-top: 12px;
+}
+
+.c-search__matchingMessage {
+  margin: 0;
+}
+
+.c-search__hint {
+  text-transform: uppercase;
+  color: $color-navy;
+  border-bottom: 1.8px solid $color-navy;
+  font-weight: $font-weight-semi-bold;
+}
+
+.c-search__matching {
+  text-align: center;
+}
+
+.c-searchResult__searchFields {
+  .search__input {
+    pointer-events: none;
+  }
+}

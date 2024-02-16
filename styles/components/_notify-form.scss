@@ -1,0 +1,42 @@
+.c-notify {
+  position: relative;
+  margin-top: 14px;
+  display: none;
+  &.c-notify--active {
+    display: block;
+  }
+}
+
+.c-notify__closeIcon {
+  max-width: 34px;
+  width: 34px;
+  height: 34px;
+}
+
+.c-notify__email {
+  padding: 14px 11px;
+  border-radius: 2px;
+  border: 1px solid $color-gray-400;
+  outline: none;
+  box-shadow: none;
+  max-width: 100%;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.c-notify__submit {
+  border-radius: 2px;
+}
+
+.c-notify__close {
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  top: -40px;
+  right: 0;
+  z-index: 1;
+}
+
+.c-notify__message{
+  color: $color-positive-800;
+}

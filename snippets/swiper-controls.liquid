@@ -1,0 +1,18 @@
+{% comment %}
+  Renders Swiper Controls.
+  Usage:
+  {% render 'swiper-controls', controls: true %}
+{% endcomment %}
+
+<!-- scrollbar -->
+
+<div class="c-swiperScrollbar{% if controls %} c-swiperScrollbar--hasControls{% endif %}" data-swiper-scrollbar></div>
+
+<!-- arrows -->
+
+{% if controls %}
+  <div class="c-swiperControls" data-swiper-controls>
+    <div class="c-swiperControls__prev" data-swiper-controls-prev></div>
+    <div class="c-swiperControls__next" data-swiper-controls-next></div>
+  </div>
+{% endif %}

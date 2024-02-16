@@ -1,0 +1,63 @@
+.c-poster__container {
+  text-align: center;
+}
+
+.c-poster__content {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: rgba(0,0,0,.3);
+  padding: 20px;
+  border-radius: 2px;
+  @include media-desktop-up {
+    gap: 24px;
+  }
+}
+
+.c-poster__subheading,
+.c-poster__heading {
+  color: $color-white;
+  margin: 0;
+}
+
+.c-poster__heading {
+  text-align: center;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 900;
+  line-height: 109%;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  @include media-desktop-up {
+    font-size: 30px;
+  }
+  @include media-desktop-large-up {
+    font-size: 44px;
+  }
+}
+
+.c-poster__img {
+  display: block;
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 2px;
+}
+
+.c-poster__link {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  inset: 0;
+  z-index: 2;
+}

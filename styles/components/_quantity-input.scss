@@ -1,0 +1,62 @@
+.c-quantityDropDown {
+  .quantity {
+    position: relative;
+    padding: 0;
+    border: 0;
+    width: 64px;
+    height: 56px;
+    min-height: 56px;
+    min-width: inherit;
+    &::after {
+      all: unset;
+      content: "";
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-top: 6px solid $color-black;
+      pointer-events: none;
+    }
+    &[disabled] {
+      &::after {
+        opacity: 0.7;
+      }
+    }
+  }
+  .quantity__select {
+    background: $color-gray-200;
+    color: $color-black;
+    background-image: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 0;
+    outline: 0;
+    display: flex;
+    padding: 8px 8px 8px 20px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: none;
+    width: 100%;
+  }
+}
+
+.c-quantityDropDown--hide {
+  display: none;
+}
+
+.c-cardSet__form {
+  .c-quantityDropDown {
+    .quantity {
+      position: relative;
+      padding: 0;
+      border: 0;
+      width: 64px;
+      height: 40px;
+      min-height: 40px;
+      min-width: inherit;
+    }
+  }
+}

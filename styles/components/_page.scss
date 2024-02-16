@@ -1,0 +1,36 @@
+.c-page {
+  background: $color-gray-200;
+  padding: 50px 0px 100px 0px;
+  a {
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  h2 {
+    font-size: $h2-font-size-mobile;
+    line-height: $h2-line-height;
+    letter-spacing: $letter-spacing;
+    @include media-tablet-up {
+      font-size: $h2-font-size-tablet;
+      letter-spacing: $h2-letter-spacing-tablet;
+    }
+    @include media-desktop-up {
+      font-size: $h2-font-size-desktop;
+      letter-spacing: $h2-letter-spacing-desktop;
+    }
+  }
+
+  p {
+    font-weight: $font-weight-normal;
+  }
+
+  img {
+    border: none;
+  }
+}
+
+.page .c-customerSupport {
+  background-color: $color-white;
+}

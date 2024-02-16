@@ -1,0 +1,40 @@
+.c-multiCol__title,
+.c-multiCol__heading,
+.c-multiCol__wrapper p,
+.c-multiCol__infoHeading {
+  margin: 0;
+}
+
+.c-multiCol__wrapper {
+  max-width: 898px;
+  padding: 0px 4px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  img {
+    width: 100%;
+  }
+}
+
+.c-multiCol__textBlocks {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  @include media-desktop-up {
+    flex-direction: row;
+    gap: 32px;
+  }
+}
+
+.c-multiCol_infoBlock {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.c-multiCol__infoImg {
+  width: 30%;
+  margin: 0 auto;
+}

@@ -1,0 +1,99 @@
+.c-cardSearch {
+  cursor: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: $color-white;
+  border-radius: 2px;
+  gap: 12px;
+  backface-visibility: hidden;
+  &:hover {
+    box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.12);
+
+    .media.media--hover-effect > a + a {
+      img {
+        opacity: 1;
+        transition: transform 500ms ease;
+        transform: scale(1.03);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.c-cardSearch__media {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 64px;
+}
+
+.c-cardSearch__img {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  position: relative;
+  object-fit: cover;
+  transition: opacity 0.3s ease-out;
+  border-radius: 2px 0 0 2px;
+  backface-visibility: hidden;
+}
+
+.c-cardSearch__content {
+  padding: 9px 0;
+  .c-price.c-price--mb {
+    margin-bottom: 0px;
+  }
+  .c-cardSearch__heading {
+    line-height: 22px;
+  }
+}
+
+.c-cardSearch__heading {
+  font-weight: $font-weight-semi-bold;
+  color: $color-black;
+  margin-top: 0;
+  margin-bottom: 0px;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.c-cardSearch {
+  .c-price {
+    line-height: $b2-line-height;
+    margin-bottom: 0;
+    color: $color-black;
+    font-weight: $font-weight-normal;
+    padding-top: 4px;
+    gap: 4px;
+    .c-price__priceOld {
+      line-height: 1;
+      color: $color-gray-800;
+      font-weight: $font-weight-normal;
+    }
+    .c-price__priceFinal {
+      line-height: 1;
+      color: $color-negative-800;
+      font-weight: $font-weight-medium;
+    }
+  }
+}
+
+.media.media--hover-effect > a + a {
+  opacity: 0;
+}
+
+.c-cardSearch:hover
+  .media.media--hover-effect
+  > a:first-child:not(:only-child) {
+  opacity: 0;
+}
+
+.c-cardSearch:hover .media.media--hover-effect > a + a {
+  opacity: 1;
+}

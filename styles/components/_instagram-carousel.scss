@@ -1,0 +1,22 @@
+.c-instaCarousel__heading {
+  font-size: $h2-font-size-mobile;
+}
+
+.c-instaCarousel__heading,
+.c-instaCarousel__desc {
+  margin: 0;
+  padding: 0;
+}
+
+.c-instaCarousel__textWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.c-instaCarousel__desc {
+  color: $color-gray-800;
+  align-self: end;
+}

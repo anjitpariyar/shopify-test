@@ -1,0 +1,123 @@
+{% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+{{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  @media screen and (max-width: 749px) {
+    .collection-hero--with-image .collection-hero__inner {
+      padding-bottom: calc({{settings.media_shadow_vertical_offset | at_least: 0}}px + 2rem);
+    }
+  }
+
+  @media (max-width: 767px) {
+    .c-collectionHero__description--toggle {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: {{ section.settings.description_max_lines }};
+      line-clamp: {{ section.settings.description_max_lines }};
+      -webkit-box-orient: vertical;
+    }
+  }
+
+{%- endstyle -%}
+
+<div class="c-collectionHero collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %} color-{{ section.settings.color_scheme }} gradient" data-grid-header>
+  <div class="collection-hero__inner page-width o-pageWidth {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    <div class="collection-hero__text-wrapper">
+      {% for block in section.blocks %}
+        {% render block %}
+      {% endfor %}
+      <h1 class="collection-hero__title c-h2">
+        <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
+        {{- collection.title | escape -}}
+      </h1>
+      {% if collection.metafields.custom.collections_subheading != blank and section.settings.show_subheading %}
+        <h3 class="c-collectionHero__subheading c-h4">{{ collection.metafields.custom.collections_subheading }}</h3>
+      {% endif %}
+      {%- if section.settings.show_collection_description and collection.description != blank -%}
+        <div class="collection-hero__description rte">
+          <p class="c-collectionHero__description c-collectionHero__description--desktop c-b2">{{ collection.description | strip_html }}</p>
+          <description-toggle>
+            <p class="c-collectionHero__description c-collectionHero__description--mobile c-collectionHero__description--toggle c-b2" data-mobile-collection-wrapper>{{ collection.description | strip_html }}</p>
+            <button class="c-collectionHero__description-toggle c-b2" data-description-toggle>Read More</button>
+          </description-toggle>
+        </div>
+      {%- endif -%}
+      {%- if section.settings.show_collection_image and collection.image -%}
+        <div class="collection-hero__image-container media gradient">
+          <img
+            srcset="
+              {%- if collection.image.width >= 165 -%}{{ collection.image | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if collection.image.width >= 360 -%}{{ collection.image | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if collection.image.width >= 535 -%}{{ collection.image | image_url: width: 535 }} 535w,{%- endif -%}
+              {%- if collection.image.width >= 750 -%}{{ collection.image | image_url: width: 750 }} 750w,{%- endif -%}
+              {%- if collection.image.width >= 1070 -%}{{ collection.image | image_url: width: 1070 }} 1070w,{%- endif -%}
+              {%- if collection.image.width >= 1500 -%}{{ collection.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+              {{ collection.image | image_url }} {{ collection.image.width }}w
+            "
+            src="{{ collection.image | image_url: width: 750 }}"
+            sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc(50vw - 130px), calc(50vw - 55px)"
+            alt=""
+            width="{{ collection.image.width }}"
+            height="{{ collection.image.height }}"
+          >
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main-collection-banner.name",
+  "class": "section",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:sections.main-collection-banner.settings.paragraph.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_description",
+      "default": true,
+      "label": "t:sections.main-collection-banner.settings.show_collection_description.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_image",
+      "default": false,
+      "label": "t:sections.main-collection-banner.settings.show_collection_image.label",
+      "info": "t:sections.main-collection-banner.settings.show_collection_image.info"
+    },
+    {
+      "type": "number",
+      "label": "Show Description Max Lines",
+      "id": "description_max_lines",
+      "default": 2
+    },
+    {
+      "type": "checkbox",
+      "id": "show_subheading",
+      "default": true,
+      "label": "Show Subheading"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_breadcrumbs",
+      "default": true,
+      "label": "Show Breadcrumbs"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    }
+  ]
+}
+{% endschema %}

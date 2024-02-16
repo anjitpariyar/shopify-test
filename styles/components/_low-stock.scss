@@ -1,0 +1,35 @@
+.c-lowStock {
+  margin-bottom: 18px;
+  @include media-desktop-up {
+    margin-bottom: 16px;
+  }
+}
+
+.c-lowStock__message {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+  color: $color-warning-800;
+  flex-wrap: wrap;
+  @include media-desktop-up {
+    flex-wrap: nowrap;
+  }
+}
+
+.c-lowStock__icon {
+  height: 20px;
+  max-width: 20px;
+  display: flex;
+  align-items: center;
+  .o-icon__lowStock {
+    max-width: 14px;
+    height: 13px;
+    margin-bottom: 2px;
+  }
+}
+
+.c-lowStock__orderSoon {
+  color: $color-warning-800;
+  font-weight: $font-weight-normal;
+}

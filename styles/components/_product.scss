@@ -1,0 +1,38 @@
+.c-product {
+  position: relative;
+  line-height: 0;
+  &:hover {
+    .c-product__cta {
+      display: block;
+    }
+  }
+}
+
+.c-product__cta {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 16px;
+  display: none;
+  z-index: 1;
+}
+
+.c-radioInputLabel--dimension {
+  background-color: $color-white;
+  border-radius: 2px;
+  border: 1px solid #EAE9E9;
+  display: inline-block;
+  text-align: center;
+  letter-spacing: normal;
+  color: $color-navy;
+  padding: 10px 20px;
+  &.c-radioInputLabel--dimension-selected {
+    border: 2px solid $color-navy;
+  }
+}
+
+.product-form__input-height,
+.product-form__depth {
+  margin-bottom: 12px;
+}

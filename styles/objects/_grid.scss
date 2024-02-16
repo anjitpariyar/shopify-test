@@ -1,0 +1,7 @@
+.o-grid {
+  display: grid;
+  gap: 14px;
+  @include media-tablet-up {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,34 @@
+.c-outOfStock {
+  margin-bottom: 8px;
+  @include media-desktop-up {
+    margin-bottom: 6px;
+  }
+}
+
+.c-outOfStock__message {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+  color: $color-red;
+  min-width: 116px;
+}
+
+.o-icon__outOfStock {
+  height: 18px;
+  max-width: 18px;
+}
+
+.c-outOfStock__notify {
+  cursor: pointer;
+  margin-right: 0;
+  margin-left: auto;
+  color: $color-navy;
+  text-decoration: underline;
+  font-weight: $font-weight-normal;
+  letter-spacing: 0.4px;
+  display: block;
+  &.c-outOfStock__notify--active {
+    display: none;
+  }
+}

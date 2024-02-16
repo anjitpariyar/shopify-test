@@ -1,0 +1,98 @@
+<modal-component>
+  <div
+    id="c-simpleModal"
+    class="c-modalSlider"
+    data-modal-slider
+    data-selected-variant-title="{{ product.selected_or_first_available_variant.title | escape }}"
+  >
+    <div class="c-modalSlider-header">
+      <span class="c-modalSliderCloseBtn" data-modal-close-btn>
+        {% render 'icon-close-search' %}
+      </span>
+    </div>
+    <div class="c-modalSlider-content">
+      <div class="c-modalSlider-body">
+        <div class="c-prodGallery">
+          <div class="swiper-container c-prodGallery__slider" data-prod-gallery-img>
+            <div class="swiper-wrapper">
+              {%- for media in product.media -%}
+                {%- liquid
+                  if section.settings.hide_variants and variant_images contains media.src or variant_images contains media.id
+                    assign variant_image = true
+                  else
+                    assign variant_image = false
+                  endif
+
+                  if product.selected_or_first_available_variant.featured_media != null
+                    assign media = product.selected_or_first_available_variant.featured_media
+                  endif
+                -%}
+                {% assign alt_text_parts = media.alt | split: '|' %}
+                {% assign variant_title = alt_text_parts[1]
+                  | strip
+                  | replace: ' ', '_'
+                  | replace: '"', ''
+                  | replace: '/', ''
+                %}
+
+                <div
+                  class="swiper-slide"
+                  data-modal-product-media-gallery
+                  data-variant-title="{{ variant_title }}"
+                >
+                  <div class="swiper-zoom-container">
+                    {% render 'product-media',
+                      media: media,
+                      loop: section.settings.enable_video_looping,
+                      variant_image: variant_image
+                    %}
+                  </div>
+                </div>
+              {%- endfor -%}
+            </div>
+            <div class="swiper-button-next" data-swiper-next><span>next</span></div>
+            <div class="swiper-button-prev" data-swiper-prev><span>prev</span></div>
+            <div class="swiper-pagination" data-swiper-pagination></div>
+          </div>
+
+          <div class="swiper-container c-prodGallery__thumbs" data-prod-gallery-thumb>
+            <div class="swiper-wrapper">
+              {%- for media in product.media -%}
+                {%- liquid
+                  if section.settings.hide_variants and variant_images contains media.src or variant_images contains media.id
+                    assign variant_image = true
+                  else
+                    assign variant_image = false
+                  endif
+
+                  if product.selected_or_first_available_variant.featured_media != null
+                    assign media = product.selected_or_first_available_variant.featured_media
+                  endif
+                -%}
+                {% assign alt_text_parts = media.alt | split: '|' %}
+                {% assign variant_title = alt_text_parts[1]
+                  | strip
+                  | replace: ' ', '_'
+                  | replace: '"', ''
+                  | replace: '/', ''
+                %}
+
+                <div
+                  class="swiper-slide"
+                  data-modal-product-media-thumbs
+                  data-variant-title="{{ variant_title }}"
+                >
+                  {% render 'product-media',
+                    media: media,
+                    loop: section.settings.enable_video_looping,
+                    variant_image: variant_image
+                  %}
+                </div>
+              {%- endfor -%}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</modal-component>

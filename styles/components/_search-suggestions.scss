@@ -1,0 +1,81 @@
+.c-searchSuggestions {
+  position: absolute;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: $color-white;
+  left: 0;
+  top: 67px;
+  max-width: 100%;
+  width: 100%;
+  min-height: 482px;
+  padding-bottom: 90px;
+  @include media-desktop-up {
+    max-height: 424px;
+    top: 80px;
+    min-height: auto;
+    height: auto;
+    overflow-y: hidden;
+    padding-bottom: 0;
+  }
+}
+
+.c-searchSuggestions__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: stretch;
+  padding: 40px 20px;
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  @include media-tablet-up {
+    gap: 32px;
+    max-width: 700px;
+    padding: 40px 0;
+  }
+}
+
+.c-searchSuggestions__popularSearches,
+.c-searchSuggestions__popularProducts {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.c-searchSuggestions__col {
+  flex: 0 0 100%;
+  gap: 24px;
+  @include media-tablet-up {
+    flex: 0 0 calc(44%);
+    gap: 32px;
+  }
+}
+
+.c-searchSuggestions__col--searches {
+  border-bottom: 1px solid $color-gray-300;
+  padding-bottom: 24px;
+  @include media-tablet-up {
+    border-right: 1px solid $color-gray-300;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+.c-searchSuggestions__link {
+  color: $color-black;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.c-searchSuggestions__heading {
+  margin: 0 0 16px;
+  color: $color-gray-600;
+}
+
+.search-modal__form[results="true"]
+  + .c-searchSuggestions
+  .c-searchSuggestions__wrapper {
+  opacity: 0;
+  visibility: hidden;
+}

@@ -1,0 +1,16 @@
+.o-container {
+  position: relative;
+  width: 1280px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.o-pageWidth {
+  max-width: 1440px;
+  margin: auto;
+  padding: 0px 20px;
+  @include media-desktop-up {
+    padding: 0px 48px;
+  }
+ }

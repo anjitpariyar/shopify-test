@@ -1,0 +1,153 @@
+.product__info-container .c-cardSet {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  background-color: $color-white;
+  padding: 12px;
+  border-radius: 2px;
+}
+
+.product__sku {
+  margin-bottom: 0;
+}
+
+.product__info-container {
+  .c-cardSet {
+    .product-form__submit {
+      min-height: 48px;
+      max-height: 48px;
+      color: $color-navy;
+      border: 1px solid $color-navy;
+      text-transform: uppercase;
+      font-weight: 600;
+      transition: all 0.4s ease;
+      &:after,
+      &:after {
+        display: none;
+      }
+    }
+  }
+  .product-form__buttons {
+    max-width: 100%;
+    width: 100%;
+  }
+  .c-product__sku {
+    color: $color-gray-800;
+    margin-bottom: 0;
+  }
+  .c-buyButtons .product-form,
+  .product__sku {
+    margin-top: 0;
+  }
+  .c-product__priceWrapper {
+    margin-bottom: 0;
+    margin-top: 25px;
+  }
+}
+
+.c-cardSet {
+  .c-cardSet__media,
+  .c-cardSet__content {
+    display: flex;
+    align-items: flex-start;
+  }
+  .c-cardSet__media {
+    flex: 0 0 64px;
+  }
+  .c-cardSet__info {
+    flex: 1;
+    padding-left: 12px;
+    display: flex;
+    flex-direction: column;
+    .c-proCard__badge {
+      gap: 8px;
+      inset: 0;
+      padding: 0;
+      margin-bottom: 8px;
+      position: relative;
+      background-color: transparent;
+    }
+  }
+  .c-cardSet__link {
+    display: flex;
+  }
+  .c-cardSet__heading {
+    font-weight: $font-weight-semi-bold;
+    color: $color-black;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .c-price {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0px;
+    flex-wrap: nowrap;
+    gap: 5px;
+  }
+  .c-cardSet__sku {
+    color: $color-gray-800;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .c-price .c-price__priceSave {
+    display: inline;
+  }
+  .c-inStock,
+  .c-lowStock,
+  .c-backOrder,
+  .c-outOfStock {
+    padding-top: 8px;
+    margin-bottom: 0;
+  }
+  .c-cardSet__form {
+    display: flex;
+    margin-top: 12px;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 12px;
+    .c-buyButtons {
+      flex: 1;
+    }
+    .product-form {
+      margin: 0;
+      width: 100%;
+      .product-form__submit {
+        margin-left: 0px;
+        margin-bottom: 0;
+        min-height: 40px;
+        max-height: 40px;
+        --color-button: $color-navy;
+        --color-button-text: $color-navy;
+        border: 2px solid $color-navy;
+        text-transform: uppercase;
+        font-weight: 600;
+        background-color: transparent;
+        &:after,
+        &:after {
+          display: none;
+        }
+        &:hover {
+          border-width: 3px;
+        }
+      }
+    }
+
+    &.c-cardSet__form--oos {
+      .c-quantityDropDown {
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+.c-product__setPrice {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 6px;
+  margin-top: 6px;
+}
+
+.c-product__skuLabel {
+  padding-right: 4px;
+}

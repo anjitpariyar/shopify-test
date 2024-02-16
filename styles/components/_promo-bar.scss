@@ -1,0 +1,50 @@
+.c-promoText {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  transition: all 0.3s ease-in-out;
+  @include media-desktop-large-up {
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.c-promoText__wrapper {
+  display: block;
+  text-align: center;
+  line-height: 133%;
+}
+
+.c-promoText__link {
+  color: rgba(var(--color-foreground));
+  font-weight: $font-weight-normal;
+  text-decoration: underline;
+  margin-left: 5px;
+  white-space: nowrap;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.c-menuDrawer__promo {
+  background-color: $color-gray-200;
+  position: absolute;
+  bottom: 54px;
+  z-index: 9;
+  width: 100%;
+}
+
+.c-menuDrawer__promo .c-promoText {
+  background-color: $color-gray-200;
+}
+
+.c-promoBar {
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.12);
+  @include media-desktop-large-up {
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.header__inline-menu {
+  .c-promoText {
+    border-top: 1px solid $color-gray-300;
+  }
+}
