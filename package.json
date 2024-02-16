@@ -31,7 +31,7 @@
     }
   },
   "scripts": {
-    "start": "shopify theme dev --store=titan-brands-fitness --theme-editor-sync",
+    "start": "shopify theme dev --store=titan-fitness-copy --theme-editor-sync",
     "watch": "webpack --watch",
     "push": "shopify theme push",
     "build": "webpack",
@@ -42,14 +42,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/elvadesigngroup/stanley.git"
+    "url": "git+https://github.com/lukuku-dev/titan-fitness-copy.git"
   },
   "author": "Elva Dev",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/elvadesigngroup/stanley/issues"
+    "url": "https://github.com/lukuku-dev/titan-fitness-copy/issues"
   },
-  "homepage": "https://github.com/elvadesigngroup/stanley#readme",
+  "homepage": "https://github.com/lukuku-dev/titan-fitness-copy#readme",
   "devDependencies": {
     "@babel/core": "^7.20.5",
     "@babel/eslint-parser": "^7.19.1",
