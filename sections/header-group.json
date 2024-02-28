@@ -9,7 +9,6 @@
           "type": "announcement",
           "settings": {
             "text": "FREE Shipping on all Orders",
-            "icon": "shopify:\/\/shop_images\/truck.png",
             "link": "",
             "prop": "Expedited shipping options available for a fee"
           }
@@ -18,7 +17,6 @@
           "type": "announcement",
           "settings": {
             "text": "All Orders Ship Next Day",
-            "icon": "shopify:\/\/shop_images\/next-day.png",
             "link": "",
             "prop": "Backorders and some other exclusions apply"
           }
@@ -27,7 +25,6 @@
           "type": "announcement",
           "settings": {
             "text": "Make Payments Over Time",
-            "icon": "shopify:\/\/shop_images\/Clock.png",
             "link": "",
             "prop": "Split pay or financing with 0% APR* available"
           }

@@ -2,39 +2,6 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
-      "blocks": {
-        "6b937500-2177-47ec-b531-310153552573": {
-          "type": "shopify:\/\/apps\/category-breadcrumbs\/blocks\/category-breadcrumbs\/dba51573-4328-452d-90db-1ad2dc5be363",
-          "settings": {
-            "override_linktext_colour": false,
-            "linktext_colour": "#0000ee",
-            "separator_colour": "#555555",
-            "producttitle_colour": "#555555",
-            "spacing_above": 0,
-            "spacing_below": 0,
-            "sep_plus_class": "breadcrumb__sep_plus3",
-            "separator_char_code": "#47;",
-            "hide_old_breadcrumb": false,
-            "show_catroot": false,
-            "link_catroot": "\/",
-            "text_catroot": "Home",
-            "show_tags": true,
-            "show_finalbread_as_textonly": true,
-            "insert_jsonld": true,
-            "insert_shortlinkfix": false,
-            "prod_multicat_sel": "leastprod",
-            "link_catall": "\/collections\/all",
-            "text_catall": "All Products",
-            "show_product_title": true,
-            "truncate_limit": 0,
-            "prod_ignore_referrer": false,
-            "old_breadcrumb_class": "breadcrumb"
-          }
-        }
-      },
-      "block_order": [
-        "6b937500-2177-47ec-b531-310153552573"
-      ],
       "settings": {
         "show_collection_description": true,
         "show_collection_image": false,

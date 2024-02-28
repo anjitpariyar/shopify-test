@@ -3,8 +3,7 @@
     "0a0237a9-d9d8-4cd3-95e4-15fecea3d253": {
       "type": "hero-banner",
       "settings": {
-        "img": "shopify:\/\/shop_images\/built-for-titans.png",
-        "img_mobile": "shopify:\/\/shop_images\/Built-for_titans-mob.png",
+        "img": "shopify:\/\/shop_images\/putting-on-your-shoes_925x_94d0e1d4-11d8-4a81-9a6a-187a20ba8a85.jpg",
         "image_overlay_opacity": 30,
         "color_scheme": "",
         "subheading": "",
@@ -16,7 +15,9 @@
         "text_color": "",
         "btn_label": "Shop Now",
         "btn_link": "#",
-        "button_color_scheme": "c-btnSecondary"
+        "button_color_scheme": "c-btnSecondary",
+        "random_text": "Hello worldd",
+        "random_text_color": "#f2f2f2"
       }
     },
     "6b312e62-79e2-4542-9232-b733004eeaf3": {
@@ -26,7 +27,6 @@
           "type": "featured_collection",
           "settings": {
             "collection": "racks",
-            "collection_img": "shopify:\/\/shop_images\/racks_93adaf38-0d5e-4547-b103-0ff000853141.png",
             "collection_heading": "Racks",
             "heading_tag": "h3",
             "collection_url": "",
@@ -37,7 +37,6 @@
           "type": "featured_collection",
           "settings": {
             "collection": "benches",
-            "collection_img": "shopify:\/\/shop_images\/banches.png",
             "collection_heading": "",
             "heading_tag": "h3",
             "collection_url": "",
@@ -48,7 +47,6 @@
           "type": "featured_collection",
           "settings": {
             "collection": "functional-weights",
-            "collection_img": "shopify:\/\/shop_images\/weight.png",
             "collection_heading": "Weights",
             "heading_tag": "h3",
             "collection_url": "",
@@ -59,7 +57,6 @@
           "type": "featured_collection",
           "settings": {
             "collection": "barbells",
-            "collection_img": "shopify:\/\/shop_images\/barbells_b3c5cb0d-5134-4d39-a60c-1d5386da831b.png",
             "collection_heading": "Barbells",
             "heading_tag": "h3",
             "collection_url": "shopify:\/\/collections\/barbells",
@@ -70,7 +67,6 @@
           "type": "featured_collection",
           "settings": {
             "collection": "cardio",
-            "collection_img": "shopify:\/\/shop_images\/racks_93adaf38-0d5e-4547-b103-0ff000853141.png",
             "collection_heading": "",
             "heading_tag": "h3",
             "collection_url": "",
@@ -81,7 +77,6 @@
           "type": "featured_collection",
           "settings": {
             "collection": "boxing-equipment",
-            "collection_img": "shopify:\/\/shop_images\/banches.png",
             "collection_heading": "Boxing",
             "heading_tag": "h3",
             "collection_url": "",
@@ -177,9 +172,8 @@
     "dd33fb8f-f355-409c-91d6-2e380aab6af7": {
       "type": "img-banner",
       "settings": {
-        "img": "shopify:\/\/shop_images\/titan-safety-series.png",
-        "img_mobile": "shopify:\/\/shop_images\/titan-safety-series-mob.png",
-        "img_width": "large",
+        "img": "shopify:\/\/shop_images\/city-woman-fashion_925x_2x_b2423031-ad22-4c35-bfb8-0d9ba62fe91e.jpg",
+        "img_width": "medium",
         "img_position": "right",
         "image_overlay_opacity": 30,
         "color_scheme": "",
@@ -201,7 +195,6 @@
         "d6c6d22e-101a-48c8-9e75-6c37b86a4990": {
           "type": "testimonial",
           "settings": {
-            "brand_logo": "shopify:\/\/shop_images\/Spartan-Brand-Quote-TF_171c1c36-afad-4fdc-94e8-e30eb8005751.webp",
             "brand_name": "Total Fitness USA",
             "testimonial": "<p>We wanted the best-in-class brand that could withstand the impact of intense training and tolerate the extreme environment of our races — the high quality and toughness of Titan is just what we needed.<\/p>",
             "author_name": "- Joe De Sena, Founder & CEO, Spartan"
@@ -210,7 +203,6 @@
         "5e9565c9-66dd-412e-8737-4ca443f6d945": {
           "type": "testimonial",
           "settings": {
-            "brand_logo": "shopify:\/\/shop_images\/RFK-Brand-Quote-TF_5464c3f8-58e5-4a55-9620-050bd2be5111.webp",
             "brand_name": "Total Fitness USA",
             "testimonial": "<p>We chose Titan because their equipment is really top-of-the-line, functionally great, and it had the look and professional feel that we want to convey at RFK Racing.<\/p>",
             "author_name": "- Brad Keslowski, RFK Racing"
@@ -219,7 +211,6 @@
         "e3872461-90ab-464f-8739-4d8bcefb93b0": {
           "type": "testimonial",
           "settings": {
-            "brand_logo": "shopify:\/\/shop_images\/Make-A-Wish-Brand-Quote-TF_c59b0d3d-941c-4937-a96d-cc44f962c5b4.webp",
             "brand_name": "Total Fitness USA",
             "testimonial": "<p>Thanks to Titan and their impressive equipment, we are able to grant some of the most transformational wishes: those that strengthen the body, while also strengthening the soul.<\/p>",
             "author_name": "– Kim Elenez, President\/CEO of Make-A-Wish North Texas"
@@ -228,7 +219,6 @@
         "df4d644d-2e55-43cb-a26a-532450caa322": {
           "type": "testimonial",
           "settings": {
-            "brand_logo": "shopify:\/\/shop_images\/Bluff-City-Brand-Quote-TF.png",
             "brand_name": "Total Fitness USA",
             "testimonial": "<p>Fitness is top priority for us. Even though firefighters are notorious for being hard on equipment, Titan products can stand up to the intensity of our training.<\/p>",
             "author_name": "- Kevin Timmons, Bluff City Combat"
@@ -237,7 +227,6 @@
         "c99eb73f-4cc5-4d67-97fd-e0c300382af2": {
           "type": "testimonial",
           "settings": {
-            "brand_logo": "shopify:\/\/shop_images\/Total-Fitness-Brand-Quote-TF_1998cec2-cf2d-4927-b5b9-bcba874e3509.webp",
             "brand_name": "Total Fitness USA",
             "testimonial": "<p>We’re able to get top notch equipment into more hands and no longer fear that quality equipment will out price many of our customers. If we want it, Titan has it.<\/p>",
             "author_name": "- Andrew Lewis, Owner Total Fitness USA"
@@ -246,7 +235,6 @@
         "a3fbe2a2-33d2-44c0-9706-47de1a108056": {
           "type": "testimonial",
           "settings": {
-            "brand_logo": "shopify:\/\/shop_images\/AMcL-Brand-Quote-TF_e590c4d3-2430-4ce3-a49e-88d27ad00ac8.webp",
             "brand_name": "Total Fitness USA",
             "testimonial": "<p>Titan made it possible to outfit our team gym with quality equipment, that will elevate our game, making it a space we’re proud to call ours.<\/p>",
             "author_name": "- Brendon Cleave, Arrow McLaren Indycar Team"
@@ -278,20 +266,6 @@
     },
     "ad6a2043-4ed4-4283-b81a-85ed64a41a72": {
       "type": "instagram-carousel",
-      "blocks": {
-        "d55e8779-cffe-43eb-bc65-20439d39af0a": {
-          "type": "shopify:\/\/apps\/reviews-io\/blocks\/reviewsio-ugc\/92a082e5-b297-4e88-b428-ac96cbc505f9",
-          "settings": {
-            "widget_id": "Sx4BChsvJ6Ai5kOq",
-            "is_product_specific": false,
-            "vertical_spacing": 0,
-            "horizontal_spacing": 0
-          }
-        }
-      },
-      "block_order": [
-        "d55e8779-cffe-43eb-bc65-20439d39af0a"
-      ],
       "settings": {
         "heading": "#UnleashYourTitan",
         "heading_tag": "h2",

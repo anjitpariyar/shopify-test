@@ -8,13 +8,6 @@
           "settings": {
           }
         },
-        "613dca01-ec4b-49f4-bc7c-e7a57d57340d": {
-          "type": "shopify:\/\/apps\/bread-pay-messaging\/blocks\/app-block-cart\/17f8811a-68d5-4aab-a4c3-0c2b49a4e68b",
-          "settings": {
-            "shopId": "91ee099f-5924-4d76-9da6-52e9863b7652",
-            "placementId": ""
-          }
-        },
         "buttons": {
           "type": "buttons",
           "settings": {
@@ -23,7 +16,6 @@
       },
       "block_order": [
         "subtotal",
-        "613dca01-ec4b-49f4-bc7c-e7a57d57340d",
         "buttons"
       ],
       "settings": {
