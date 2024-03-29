@@ -6,9 +6,46 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "faq_practice_yKqjjM": {
+      "type": "faq-practice",
+      "blocks": {
+        "question_T6QRHy": {
+          "type": "question",
+          "settings": {
+            "question": "Title",
+            "answer": "Description"
+          }
+        },
+        "question_nULwPg": {
+          "type": "question",
+          "settings": {
+            "question": "Where can I subscribe to your newsletter?",
+            "answer": "We often send out our newsletter with news and great offers. We will never disclose your data to third parties and you can unsubscribe from the newsletter at <span> any<\/span>"
+          }
+        },
+        "question_TwdyNG": {
+          "type": "question",
+          "settings": {
+            "question": "Where do I find your physical store and what are your opening hours?",
+            "answer": "We are selling magazines only through our online shop which is opened 24 hours a day. We don’t have a physical store location at the moment.<br><br> You can order our magazines through our online shop and we’re shipping all orders with the Swiss Post and DHL Express to all around the world. Please visit our shipping section for more details. From time to time you can find us at design fairs and popup markets in Switzerland. Subscribe to our newsletter and you’ll receive the latest news."
+          }
+        }
+      },
+      "block_order": [
+        "question_T6QRHy",
+        "question_nULwPg",
+        "question_TwdyNG"
+      ],
+      "settings": {
+        "heading": "Power Rack FAQ's",
+        "heading_tag": "h2",
+        "description": ""
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "faq_practice_yKqjjM"
   ]
 }

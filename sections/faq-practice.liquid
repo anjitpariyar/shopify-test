@@ -6,8 +6,7 @@
       <div class="c-faqs__row">
         {% if section.settings.heading != blank %}
           <div class="c-faqs__row">
-            {%
-              render 'heading',
+            {% render 'heading',
               classes: 'c-faqs__heading c-h3',
               level: section.settings.heading_tag,
               text: section.settings.heading
@@ -22,20 +21,21 @@
         <div class="c-faqsAccordions">
           {% for block in section.blocks %}
             <div class="c-faqsAccordion">
-            <div class="c-faqsAccordion__header" data-accordion-item-header="true">
-              <h4 class="c-faqsAccordion__heading c-h4">{{block.settings.question}}</h4>
+              <div class="c-faqsAccordion__header" data-accordion-item-header="true">
+                <h4 class="c-faqsAccordion__heading c-h4">{{ block.settings.question }}</h4>
+              </div>
+              <div class="c-faqsAccordion__body">
+                <div class="c-faqsAccordion__content c-b1">{{ block.settings.answer }}</div>
+              </div>
             </div>
-            <div class="c-faqsAccordion__body">
-              <div class="c-faqsAccordion__content c-b1">{{block.settings.answer}}</div>
-            </div>
-          </div>
           {% endfor %}
-          
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<script src="{{ 'faq-test.js' | asset_url }}" defer></script>
 
 {% schema %}
 {
@@ -85,7 +85,6 @@
       "id": "description",
       "label": "Description"
     }
- 
   ],
   "blocks": [
     {
@@ -116,6 +115,3 @@
 
 {% stylesheet %}
 {% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
